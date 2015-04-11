@@ -1,6 +1,6 @@
 {
-	"name": "cartalyst/sentry",
-	"description": "PHP 5.3+ Fully-featured Authentication & Authorization System",
+	"name": "jacopo/authentication-sentry",
+	"description": "PHP 5.3+ Sentry fork for laravel authentication acl package",
 	"keywords": ["auth", "security", "laravel", "codeigniter", "fuelphp", "kohana"],
 	"license": "BSD-3-Clause",
 	"authors": [
