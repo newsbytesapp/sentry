@@ -35,10 +35,10 @@
 	"require-dev": {
 		"mockery/mockery": "0.9.*",
 
-		"illuminate/cookie": "~4.0|~5.0|~5.1",
-		"illuminate/database": "~4.0|~5.0|~5.1",
-		"illuminate/http": "~4.0|~5.0|~5.1",
-		"illuminate/session": "~4.0|~5.0|~5.1",
+		"illuminate/cookie": "~5.0|~5.1",
+		"illuminate/database": "~5.0|~5.1",
+		"illuminate/http": "~5.0|~5.1",
+		"illuminate/session": "~5.0|~5.1",
 		"ircmaxell/password-compat": "1.0.*"
 	},
 	"suggest": {
@@ -59,7 +59,7 @@
 	},
 	"extra": {
 		"component": "package",
-		"frameworks": ["Laravel 3", "Laravel 4", "CodeIgniter 3", "FuelPHP 1", "Kohana"],
+		"frameworks": ["Laravel 5"],
 		"versions": {
 			"1": "1.1/master",
 			"2": "master"
