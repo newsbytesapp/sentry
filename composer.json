@@ -50,8 +50,7 @@
 		"classmap": [
 			"src/Cartalyst/Sentry/Groups/Exceptions.php",
 			"src/Cartalyst/Sentry/Throttling/Exceptions.php",
-			"src/Cartalyst/Sentry/Users/Exceptions.php",
-			"src/migrations"
+			"src/Cartalyst/Sentry/Users/Exceptions.php"
 		],
 		"psr-0": {
 			"Cartalyst\\Sentry": "src/"
