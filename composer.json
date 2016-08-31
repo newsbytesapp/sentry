@@ -35,10 +35,10 @@
 	"require-dev": {
 		"mockery/mockery": "0.9.*",
 
-		"illuminate/cookie": "~5.0|~5.1",
-		"illuminate/database": "~5.0|~5.1",
-		"illuminate/http": "~5.0|~5.1",
-		"illuminate/session": "~5.0|~5.1",
+		"illuminate/cookie": "~5.0|~5.1|~5.2|~5.3",
+		"illuminate/database": "~5.0|~5.1|~5.2|~5.3",
+		"illuminate/http": "~5.0|~5.1|~5.2|~5.3",
+		"illuminate/session": "~5.0|~5.1|~5.2|~5.3",
 		"ircmaxell/password-compat": "1.0.*"
 	},
 	"suggest": {
