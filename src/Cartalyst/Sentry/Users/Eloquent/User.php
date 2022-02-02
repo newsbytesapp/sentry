@@ -1,4 +1,5 @@
 <?php namespace Cartalyst\Sentry\Users\Eloquent;
+
 /**
  * Part of the Sentry package.
  *
@@ -27,6 +28,7 @@ use Cartalyst\Sentry\Users\PasswordRequiredException;
 use Cartalyst\Sentry\Users\UserAlreadyActivatedException;
 use Cartalyst\Sentry\Users\UserExistsException;
 use Cartalyst\Sentry\Users\UserInterface;
+use Illuminate\Support\Str;
 
 class User extends Model implements UserInterface {
 
@@ -726,7 +728,7 @@ class User extends Model implements UserInterface {
 			// Now, let's check if the permission ends in a wildcard "*" symbol.
 			// If it does, we'll check through all the merged permissions to see
 			// if a permission exists which matches the wildcard.
-			if ((strlen($permission) > 1) and ends_with($permission, '*'))
+			if ((strlen($permission) > 1) and Str::endsWith($permission, '*'))
 			{
 				$matched = false;
 
@@ -737,7 +739,7 @@ class User extends Model implements UserInterface {
 
 					// We will make sure that the merged permission does not
 					// exactly match our permission, but starts with it.
-					if ($checkPermission != $mergedPermission and starts_with($mergedPermission, $checkPermission) and $value == 1)
+					if ($checkPermission != $mergedPermission and Str::startsWith($mergedPermission, $checkPermission) and $value == 1)
 					{
 						$matched = true;
 						break;
@@ -745,7 +747,7 @@ class User extends Model implements UserInterface {
 				}
 			}
 
-			elseif ((strlen($permission) > 1) and starts_with($permission, '*'))
+			elseif ((strlen($permission) > 1) and Str::startsWith($permission, '*'))
 			{
 				$matched = false;
 
@@ -756,7 +758,7 @@ class User extends Model implements UserInterface {
 
 					// We will make sure that the merged permission does not
 					// exactly match our permission, but ends with it.
-					if ($checkPermission != $mergedPermission and ends_with($mergedPermission, $checkPermission) and $value == 1)
+					if ($checkPermission != $mergedPermission and Str::endsWith($mergedPermission, $checkPermission) and $value == 1)
 					{
 						$matched = true;
 						break;
@@ -771,7 +773,7 @@ class User extends Model implements UserInterface {
 				foreach ($mergedPermissions as $mergedPermission => $value)
 				{
 					// This time check if the mergedPermission ends in wildcard "*" symbol.
-					if ((strlen($mergedPermission) > 1) and ends_with($mergedPermission, '*'))
+					if ((strlen($mergedPermission) > 1) and Str::endsWith($mergedPermission, '*'))
 					{
 						$matched = false;
 
@@ -780,7 +782,7 @@ class User extends Model implements UserInterface {
 
 						// We will make sure that the merged permission does not
 						// exactly match our permission, but starts with it.
-						if ($checkMergedPermission != $permission and starts_with($permission, $checkMergedPermission) and $value == 1)
+						if ($checkMergedPermission != $permission and Str::startsWith($permission, $checkMergedPermission) and $value == 1)
 						{
 							$matched = true;
 							break;
